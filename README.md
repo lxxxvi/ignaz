@@ -1,24 +1,20 @@
-# README
+# Ignaz
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```gql
+query_string = "
+  query getCovidCases($region: String) {
+    covidCases(abbreviationCantonAndFl: $region) {
+      date
+      time
+      abbreviationCantonAndFl
+      ncumulConf
+    }
+  }
+"
+```
 
-Things you may want to cover:
+```ruby
+variables = { "region" => "AG" }
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+result_hash = IgnazSchema.execute(query_string, variables: variables)
+```

@@ -1,13 +1,14 @@
 module Types
   class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :covid_cases, [CovidCaseType], null: false do
+      description 'Covid cases'
+      argument :abbreviation_canton_and_fl, String, required: false
+    end
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    def covid_cases(abbreviation_canton_and_fl:)
+      CovidCase.for_region(abbreviation_canton_and_fl)
+               .ordered_by_region
+               .ordered_chronologically
     end
   end
 end
