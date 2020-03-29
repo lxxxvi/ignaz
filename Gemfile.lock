@@ -67,6 +67,7 @@ GEM
     erubi (1.9.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    graphql (1.10.5)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     loofah (2.4.0)
@@ -141,6 +142,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   bugsnag
   byebug
+  graphql
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.2)
