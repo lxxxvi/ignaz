@@ -1,0 +1,2 @@
+class CovidCase < ApplicationRecord
+end
