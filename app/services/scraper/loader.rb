@@ -15,13 +15,7 @@ class Scraper::Loader < Scraper
       covid_case = open_zh_row.to_covid_case
       covid_case.save!
     rescue StandardError => e
-      puts "*** ERROR"
-      puts "#{row.inspect}"
-      puts ""
-      puts "#{e}"
-      puts "#{e.backtrace.join("\n")}"
-      puts ""
-      puts ""
+      raise Scraper::LoaderError.new(row, e)
     end
   end
 end
