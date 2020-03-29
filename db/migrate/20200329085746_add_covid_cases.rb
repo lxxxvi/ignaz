@@ -1,7 +1,8 @@
-class AddCases < ActiveRecord::Migration[6.0]
+class AddCovidCases < ActiveRecord::Migration[6.0]
   def change
-    create_table :cases do |t|
-      t.time :datetime, null: false
+    create_table :covid_cases do |t|
+      t.date :date, null: false
+      t.string :time, null: false
       t.string :abbreviation_canton_and_fl, null: false
       t.integer :ncumul_tested, null: true
       t.integer :ncumul_conf, null: true
@@ -13,7 +14,7 @@ class AddCases < ActiveRecord::Migration[6.0]
       t.integer :ninstant_ICU_intub, null: true
       t.string :source, null: true
 
-      t.index [:abbreviation_canton_and_fl, :datetime], unique: true
+      t.index [:abbreviation_canton_and_fl, :date, :time], unique: true, name: :indx_canton_date_time
 
       t.timestamps
     end

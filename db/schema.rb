@@ -15,8 +15,9 @@ ActiveRecord::Schema.define(version: 2020_03_29_085746) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cases", force: :cascade do |t|
-    t.time "datetime", null: false
+  create_table "covid_cases", force: :cascade do |t|
+    t.date "date", null: false
+    t.string "time", null: false
     t.string "abbreviation_canton_and_fl", null: false
     t.integer "ncumul_tested"
     t.integer "ncumul_conf"
@@ -29,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_03_29_085746) do
     t.string "source"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["abbreviation_canton_and_fl", "datetime"], name: "index_cases_on_abbreviation_canton_and_fl_and_datetime", unique: true
+    t.index ["abbreviation_canton_and_fl", "date", "time"], name: "indx_canton_date_time", unique: true
   end
 
 end
