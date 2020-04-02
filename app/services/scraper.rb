@@ -20,8 +20,11 @@ class Scraper
       errors << Scraper::Error.new(url, e)
     end
 
+    DeltaColumnsUpdater.call
+
     if errors.any?
       puts "There were #{errors.count} errors"
+      puts errors.join("\n")
       Bugsnag.notify(errors.join("\n"))
       exit 9
     end
