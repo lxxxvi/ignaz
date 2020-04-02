@@ -16,12 +16,19 @@ zg_20200320:
   date: '2020-03-20'
   time: ''
   abbreviation_canton_and_fl: 'ZG'
-  ncumul_tested:
+  ncumul_tested: 9
+  ndelta_tested: 9
   ncumul_conf: 48
+  ndelta_conf: 9
   ncumul_hosp: 1
+  ndelta_hosp: 0
   ncumul_icu:
+  ndelta_icu:
   ncumul_vent:
-  ncumul_released: 5
-  ncumul_deceased:
+  ndelta_vent:
+  ncumul_released: 15
+  ndelta_released: 9
+  ncumul_deceased: 2
+  ndelta_deceased: 2
   ninstant_icu_intub:
   source: 'https://www.zg.ch/behoerden/gesundheitsdirektion/direktionssekretariat/aktuell/coronavirus-ausreichende-testkapazitaeten-im-kanton-zug-vorhanden'

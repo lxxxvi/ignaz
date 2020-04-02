@@ -47,12 +47,19 @@ Endpoint: `/graphql`
     time
     abbreviationCantonAndFl
     ncumulTested
+    ndeltaTested
     ncumulConf
+    ndeltaConf
     ncumulHosp
+    ndeltaHosp
     ncumulIcu
+    ndeltaIcu
     ncumulVent
+    ndeltaVent
     ncumulReleased
+    ndeltaReleased
     ncumulDeceased
+    ndeltaDeceased
     ninstantIcuIntub
     source
   }
@@ -68,12 +75,19 @@ Endpoint: `/graphql`
     time
     abbreviationCantonAndFl
     ncumulTested
+    ndeltaTested
     ncumulConf
+    ndeltaConf
     ncumulHosp
+    ndeltaHosp
     ncumulIcu
+    ndeltaIcu
     ncumulVent
+    ndeltaVent
     ncumulReleased
+    ndeltaReleased
     ncumulDeceased
+    ndeltaDeceased
     ninstantIcuIntub
     source
   }

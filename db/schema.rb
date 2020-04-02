@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_082607) do
+ActiveRecord::Schema.define(version: 2020_04_02_135133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cantons", id: false, force: :cascade do |t|
+    t.string "abbreviation"
+    t.integer "population"
+  end
 
   create_table "covid_cases", force: :cascade do |t|
     t.date "date", null: false
@@ -30,6 +35,13 @@ ActiveRecord::Schema.define(version: 2020_04_02_082607) do
     t.string "source"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "ndelta_tested"
+    t.integer "ndelta_conf"
+    t.integer "ndelta_hosp"
+    t.integer "ndelta_icu"
+    t.integer "ndelta_vent"
+    t.integer "ndelta_released"
+    t.integer "ndelta_deceased"
     t.index ["abbreviation_canton_and_fl", "date", "time"], name: "indx_canton_date_time", unique: true
   end
 
