@@ -36,22 +36,46 @@ TBD
 
 Endpoint: `/graphql`
 
+### Examples
 
-```gql
-query_string = "
-  query getCovidCases($region: String) {
-    covidCases(abbreviationCantonAndFl: $region) {
-      date
-      time
-      abbreviationCantonAndFl
-      ncumulConf
-    }
+**All**
+
+```graphql
+{
+  covidCases {
+    date
+    time
+    abbreviationCantonAndFl
+    ncumulTested
+    ncumulConf
+    ncumulHosp
+    ncumulIcu
+    ncumulVent
+    ncumulReleased
+    ncumulDeceased
+    ninstantIcuIntub
+    source
   }
-"
+}
 ```
 
-```ruby
-variables = { "region" => "AG" }
+**Filtered by region**
 
-result_hash = IgnazSchema.execute(query_string, variables: variables)
+```graphql
+{
+  covidCases(abbreviationCantonAndFl: "ZG") {
+    date
+    time
+    abbreviationCantonAndFl
+    ncumulTested
+    ncumulConf
+    ncumulHosp
+    ncumulIcu
+    ncumulVent
+    ncumulReleased
+    ncumulDeceased
+    ninstantIcuIntub
+    source
+  }
+}
 ```
