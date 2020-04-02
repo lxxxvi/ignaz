@@ -23,11 +23,11 @@ class Scraper::OpenZhRow
       ncumul_tested: ncumul_tested,
       ncumul_conf: ncumul_conf,
       ncumul_hosp: ncumul_hosp,
-      ncumul_ICU: ncumul_ICU,
+      ncumul_icu: ncumul_ICU,
       ncumul_vent: ncumul_vent,
       ncumul_released: ncumul_released,
       ncumul_deceased: ncumul_deceased,
-      ninstant_ICU_intub: ninstant_ICU_intub,
+      ninstant_icu_intub: ninstant_ICU_intub,
       source: source
     }
   end
