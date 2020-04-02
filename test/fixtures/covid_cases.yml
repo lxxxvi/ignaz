@@ -1,0 +1,27 @@
+fr_20200322:
+  date: '2020-03-22'
+  time: ''
+  abbreviation_canton_and_fl: 'FR'
+  ncumul_tested:
+  ncumul_conf: 202
+  ncumul_hosp: 32
+  ncumul_icu: 8
+  ncumul_vent:
+  ncumul_released:
+  ncumul_deceased: 3
+  ninstant_icu_intub:
+  source: 'https://www.fr.ch/covid19/sante/covid-19/coronavirus-statistiques-evolution-de-la-situation-dans-le-canton'
+
+zg_20200320:
+  date: '2020-03-20'
+  time: ''
+  abbreviation_canton_and_fl: 'ZG'
+  ncumul_tested:
+  ncumul_conf: 48
+  ncumul_hosp: 1
+  ncumul_icu:
+  ncumul_vent:
+  ncumul_released: 5
+  ncumul_deceased:
+  ninstant_icu_intub:
+  source: 'https://www.zg.ch/behoerden/gesundheitsdirektion/direktionssekretariat/aktuell/coronavirus-ausreichende-testkapazitaeten-im-kanton-zug-vorhanden'

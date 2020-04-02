@@ -5,7 +5,7 @@ module Types
       argument :abbreviation_canton_and_fl, String, required: false
     end
 
-    def covid_cases(abbreviation_canton_and_fl:)
+    def covid_cases(abbreviation_canton_and_fl: nil)
       CovidCase.for_region(abbreviation_canton_and_fl)
                .ordered_by_region
                .ordered_chronologically

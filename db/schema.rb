@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_29_085746) do
+ActiveRecord::Schema.define(version: 2020_04_02_082607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,11 +22,11 @@ ActiveRecord::Schema.define(version: 2020_03_29_085746) do
     t.integer "ncumul_tested"
     t.integer "ncumul_conf"
     t.integer "ncumul_hosp"
-    t.integer "ncumul_ICU"
+    t.integer "ncumul_icu"
     t.integer "ncumul_vent"
     t.integer "ncumul_released"
     t.integer "ncumul_deceased"
-    t.integer "ninstant_ICU_intub"
+    t.integer "ninstant_icu_intub"
     t.string "source"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
