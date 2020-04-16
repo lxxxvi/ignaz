@@ -1,5 +1,5 @@
 class Scraper::Urls
-  BASE_URL = 'https://raw.githubusercontent.com/openZH/covid_19/master/fallzahlen_kanton_total_csv/'.freeze
+  BASE_URL = 'https://raw.githubusercontent.com/openZH/covid_19/master/fallzahlen_kanton_total_csv_v2/'.freeze
 
   def self.all
     %w[
@@ -33,3 +33,5 @@ class Scraper::Urls
     ].map { |filename| "#{BASE_URL}#{filename}" }
   end
 end
+
+

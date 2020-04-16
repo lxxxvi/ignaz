@@ -2,33 +2,31 @@ fr_20200322:
   date: '2020-03-22'
   time: ''
   abbreviation_canton_and_fl: 'FR'
-  ncumul_tested:
-  ncumul_conf: 202
-  ncumul_hosp: 32
-  ncumul_icu: 8
-  ncumul_vent:
-  ncumul_released:
-  ncumul_deceased: 3
-  ninstant_icu_intub:
+  tested_total:
+  confirmed_total: 202
+  hospitalized_current: 32
+  icu_current: 8
+  ventilation_current:
+  released_total:
+  deceased_total: 3
   source: 'https://www.fr.ch/covid19/sante/covid-19/coronavirus-statistiques-evolution-de-la-situation-dans-le-canton'
 
 zg_20200320:
   date: '2020-03-20'
   time: ''
   abbreviation_canton_and_fl: 'ZG'
-  ncumul_tested: 9
-  ndelta_tested: 9
-  ncumul_conf: 48
-  ndelta_conf: 9
-  ncumul_hosp: 1
-  ndelta_hosp: 0
-  ncumul_icu:
-  ndelta_icu:
-  ncumul_vent:
-  ndelta_vent:
-  ncumul_released: 15
-  ndelta_released: 9
-  ncumul_deceased: 2
-  ndelta_deceased: 2
-  ninstant_icu_intub:
+  tested_total: 9
+  tested_total_delta: 9
+  confirmed_total: 48
+  confirmed_total_delta: 9
+  hospitalized_current: 1
+  hospitalized_current_delta: 0
+  icu_current:
+  icu_current_delta:
+  ventilation_current:
+  ventilation_current_delta:
+  released_total: 15
+  released_total_delta: 9
+  deceased_total: 2
+  deceased_total_delta: 2
   source: 'https://www.zg.ch/behoerden/gesundheitsdirektion/direktionssekretariat/aktuell/coronavirus-ausreichende-testkapazitaeten-im-kanton-zug-vorhanden'

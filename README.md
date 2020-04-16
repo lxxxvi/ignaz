@@ -46,21 +46,21 @@ Endpoint: `/graphql`
     date
     time
     abbreviationCantonAndFl
-    ncumulTested
-    ndeltaTested
-    ncumulConf
-    ndeltaConf
-    ncumulHosp
-    ndeltaHosp
-    ncumulIcu
-    ndeltaIcu
-    ncumulVent
-    ndeltaVent
-    ncumulReleased
-    ndeltaReleased
-    ncumulDeceased
-    ndeltaDeceased
-    ninstantIcuIntub
+    testedTotal
+    testedTotalDelta
+    confirmedTotal
+    confirmedTotalDelta
+    hospitalizedCurrent
+    hospitalizedCurrentDelta
+    icuCurrent
+    icuCurrentDelta
+    ventilationCurrent
+    ventilationCurrentDelta
+    releasedTotal
+    releasedTotalDelta
+    deceasedTotal
+    deceasedTotalDelta
+    source
     source
   }
 }
@@ -74,21 +74,21 @@ Endpoint: `/graphql`
     date
     time
     abbreviationCantonAndFl
-    ncumulTested
-    ndeltaTested
-    ncumulConf
-    ndeltaConf
-    ncumulHosp
-    ndeltaHosp
-    ncumulIcu
-    ndeltaIcu
-    ncumulVent
-    ndeltaVent
-    ncumulReleased
-    ndeltaReleased
-    ncumulDeceased
-    ndeltaDeceased
-    ninstantIcuIntub
+    testedTotal
+    testedTotalDelta
+    confirmedTotal
+    confirmedTotalDelta
+    hospitalizedCurrent
+    hospitalizedCurrentDelta
+    icuCurrent
+    icuCurrentDelta
+    ventilationCurrent
+    ventilationCurrentDelta
+    releasedTotal
+    releasedTotalDelta
+    deceasedTotal
+    deceasedTotalDelta
+    source
     source
   }
 }

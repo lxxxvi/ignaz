@@ -21,26 +21,26 @@ class GraphqlControllerTest < ActionDispatch::IntegrationTest
       assert_equal '', covid_case['time']
       assert_equal 'ZG', covid_case['abbreviationCantonAndFl']
 
-      assert_equal 9, covid_case['ncumulTested']
-      assert_equal 9, covid_case['ndeltaTested']
+      assert_equal 9, covid_case['testedTotal']
+      assert_equal 9, covid_case['testedTotalDelta']
 
-      assert_equal 48, covid_case['ncumulConf']
-      assert_equal 9, covid_case['ndeltaConf']
+      assert_equal 48, covid_case['confirmedTotal']
+      assert_equal 9, covid_case['confirmedTotalDelta']
 
-      assert_equal 1, covid_case['ncumulHosp']
-      assert_equal 0, covid_case['ndeltaHosp']
+      assert_equal 1, covid_case['hospitalizedCurrent']
+      assert_equal 0, covid_case['hospitalizedCurrentDelta']
 
-      assert_nil covid_case['ncumulIcu']
-      assert_nil covid_case['ndeltaIcu']
+      assert_nil covid_case['icuCurrent']
+      assert_nil covid_case['icuCurrentDelta']
 
-      assert_nil covid_case['ncumulVent']
-      assert_nil covid_case['ndeltaVent']
+      assert_nil covid_case['ventilationCurrent']
+      assert_nil covid_case['ventilationCurrentDelta']
 
-      assert_equal 15, covid_case['ncumulReleased']
-      assert_equal 9, covid_case['ndeltaReleased']
+      assert_equal 15, covid_case['releasedTotal']
+      assert_equal 9, covid_case['releasedTotalDelta']
 
-      assert_equal 2, covid_case['ncumulDeceased']
-      assert_equal 2, covid_case['ndeltaDeceased']
+      assert_equal 2, covid_case['deceasedTotal']
+      assert_equal 2, covid_case['deceasedTotalDelta']
     end
   end
 
@@ -53,21 +53,20 @@ class GraphqlControllerTest < ActionDispatch::IntegrationTest
           date
           time
           abbreviationCantonAndFl
-          ncumulTested
-          ndeltaTested
-          ncumulConf
-          ndeltaConf
-          ncumulHosp
-          ndeltaHosp
-          ncumulIcu
-          ndeltaIcu
-          ncumulVent
-          ndeltaVent
-          ncumulReleased
-          ndeltaReleased
-          ncumulDeceased
-          ndeltaDeceased
-          ninstantIcuIntub
+          testedTotal
+          testedTotalDelta
+          confirmedTotal
+          confirmedTotalDelta
+          hospitalizedCurrent
+          hospitalizedCurrentDelta
+          icuCurrent
+          icuCurrentDelta
+          ventilationCurrent
+          ventilationCurrentDelta
+          releasedTotal
+          releasedTotalDelta
+          deceasedTotal
+          deceasedTotalDelta
           source
         }
       }

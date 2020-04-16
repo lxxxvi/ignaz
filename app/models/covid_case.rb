@@ -8,4 +8,12 @@ class CovidCase < ApplicationRecord
 
     where(abbreviation_canton_and_fl: region)
   }
+
+  before_validation :set_defaults
+
+  private
+
+  def set_defaults
+    self.time ||= self.class.column_defaults['time']
+  end
 end

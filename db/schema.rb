@@ -10,33 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_135133) do
+ActiveRecord::Schema.define(version: 2020_04_16_110356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "covid_cases", force: :cascade do |t|
     t.date "date", null: false
-    t.string "time", null: false
+    t.string "time", default: "00:00", null: false
     t.string "abbreviation_canton_and_fl", null: false
-    t.integer "ncumul_tested"
-    t.integer "ncumul_conf"
-    t.integer "ncumul_hosp"
-    t.integer "ncumul_icu"
-    t.integer "ncumul_vent"
-    t.integer "ncumul_released"
-    t.integer "ncumul_deceased"
-    t.integer "ninstant_icu_intub"
+    t.integer "tested_total"
+    t.integer "tested_total_delta"
+    t.integer "confirmed_total"
+    t.integer "confirmed_total_delta"
+    t.integer "hospitalized_new"
+    t.integer "hospitalized_current"
+    t.integer "hospitalized_current_delta"
+    t.integer "icu_current"
+    t.integer "icu_current_delta"
+    t.integer "ventilation_current"
+    t.integer "ventilation_current_delta"
+    t.integer "released_total"
+    t.integer "released_total_delta"
+    t.integer "deceased_total"
+    t.integer "deceased_total_delta"
     t.string "source"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "ndelta_tested"
-    t.integer "ndelta_conf"
-    t.integer "ndelta_hosp"
-    t.integer "ndelta_icu"
-    t.integer "ndelta_vent"
-    t.integer "ndelta_released"
-    t.integer "ndelta_deceased"
     t.index ["abbreviation_canton_and_fl", "date", "time"], name: "indx_canton_date_time", unique: true
   end
 
