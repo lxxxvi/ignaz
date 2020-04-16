@@ -15,11 +15,6 @@ ActiveRecord::Schema.define(version: 2020_04_02_135133) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cantons", id: false, force: :cascade do |t|
-    t.string "abbreviation"
-    t.integer "population"
-  end
-
   create_table "covid_cases", force: :cascade do |t|
     t.date "date", null: false
     t.string "time", null: false
