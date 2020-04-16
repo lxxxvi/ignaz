@@ -24,7 +24,8 @@ class Scraper
       end
     end
 
-    DeltaColumnsUpdater.call
+    NullGapsFiller.call
+    DeltasCalculator.call
 
     if errors.any?
       puts "There were #{errors.count} errors"

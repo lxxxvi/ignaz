@@ -1,6 +1,4 @@
 class Scraper::OpenZhRow
-  DEFAULTS = { time: '00:00' }.freeze
-
   def initialize(csv_row)
     @csv_row = csv_row
   end
@@ -20,14 +18,21 @@ class Scraper::OpenZhRow
       date: date,
       time: time,
       abbreviation_canton_and_fl: abbreviation_canton_and_fl,
-      ncumul_tested: ncumul_tested,
-      ncumul_conf: ncumul_conf,
-      ncumul_hosp: ncumul_hosp,
-      ncumul_icu: ncumul_ICU,
-      ncumul_vent: ncumul_vent,
-      ncumul_released: ncumul_released,
-      ncumul_deceased: ncumul_deceased,
-      ninstant_icu_intub: ninstant_ICU_intub,
+      tested_total: ncumul_tested,
+      tested_total_delta: nil,
+      confirmed_total: ncumul_conf,
+      confirmed_total_delta: nil,
+      hospitalized_new: new_hosp,
+      hospitalized_current: current_hosp,
+      hospitalized_current_delta: nil,
+      icu_current: current_icu,
+      icu_current_delta: nil,
+      ventilation_current: current_vent,
+      ventilation_current_delta: nil,
+      released_total: ncumul_released,
+      released_total_delta: nil,
+      deceased_total: ncumul_deceased,
+      deceased_total_delta: nil,
       source: source
     }
   end
@@ -37,7 +42,7 @@ class Scraper::OpenZhRow
   end
 
   def time
-    @csv_row['time'] || DEFAULTS[:time]
+    @csv_row['time']
   end
 
   def abbreviation_canton_and_fl
@@ -52,16 +57,20 @@ class Scraper::OpenZhRow
     @csv_row['ncumul_conf']
   end
 
-  def ncumul_hosp
-    @csv_row['ncumul_hosp']
+  def new_hosp
+    @csv_row['new_hosp']
   end
 
-  def ncumul_ICU
-    @csv_row['ncumul_ICU']
+  def current_hosp
+    @csv_row['current_hosp']
   end
 
-  def ncumul_vent
-    @csv_row['ncumul_vent']
+  def current_icu
+    @csv_row['current_icu']
+  end
+
+  def current_vent
+    @csv_row['current_vent']
   end
 
   def ncumul_released
@@ -70,10 +79,6 @@ class Scraper::OpenZhRow
 
   def ncumul_deceased
     @csv_row['ncumul_deceased']
-  end
-
-  def ninstant_ICU_intub
-    @csv_row['ninstant_ICU_intub']
   end
 
   def source

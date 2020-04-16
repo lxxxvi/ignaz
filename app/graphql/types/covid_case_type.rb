@@ -4,21 +4,20 @@ module Types
     field :date, GraphQL::Types::ISO8601Date, null: false
     field :time, String, null: false
     field :abbreviation_canton_and_fl, String, null: false
-    field :ncumul_tested, Integer, null: true
-    field :ndelta_tested, Integer, null: true
-    field :ncumul_conf, Integer, null: true
-    field :ndelta_conf, Integer, null: true
-    field :ncumul_hosp, Integer, null: true
-    field :ndelta_hosp, Integer, null: true
-    field :ncumul_icu, Integer, null: true
-    field :ndelta_icu, Integer, null: true
-    field :ncumul_vent, Integer, null: true
-    field :ndelta_vent, Integer, null: true
-    field :ncumul_released, Integer, null: true
-    field :ndelta_released, Integer, null: true
-    field :ncumul_deceased, Integer, null: true
-    field :ndelta_deceased, Integer, null: true
-    field :ninstant_icu_intub, Integer, null: true
+    field :tested_total, Integer, null: true
+    field :tested_total_delta, Integer, null: true
+    field :confirmed_total, Integer, null: true
+    field :confirmed_total_delta, Integer, null: true
+    field :hospitalized_current, Integer, null: true
+    field :hospitalized_current_delta, Integer, null: true
+    field :icu_current, Integer, null: true
+    field :icu_current_delta, Integer, null: true
+    field :ventilation_current, Integer, null: true
+    field :ventilation_current_delta, Integer, null: true
+    field :released_total, Integer, null: true
+    field :released_total_delta, Integer, null: true
+    field :deceased_total, Integer, null: true
+    field :deceased_total_delta, Integer, null: true
     field :source, String, null: true
   end
 end
