@@ -42,7 +42,7 @@ class Scraper::OpenZhRow
   end
 
   def time
-    @csv_row['time']
+    @csv_row['time'] || CovidCase.column_defaults['time']
   end
 
   def abbreviation_canton_and_fl
