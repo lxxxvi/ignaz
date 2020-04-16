@@ -13,11 +13,15 @@ class Scraper
   def self.call
     errors = []
 
-    Scraper::Urls.all.each do |url|
-      puts "Processing #{url}"
-      Scraper::Loader.new(url).call
-    rescue Scraper::LoaderError => e
-      errors << Scraper::Error.new(url, e)
+    CovidCase.transaction do
+      CovidCase.connection.execute("DELETE FROM #{CovidCase.table_name}")
+
+      Scraper::Urls.all.each do |url|
+        puts "Processing #{url}"
+        Scraper::Loader.new(url).call
+      rescue Scraper::LoaderError => e
+        errors << Scraper::Error.new(url, e)
+      end
     end
 
     DeltaColumnsUpdater.call
