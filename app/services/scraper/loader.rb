@@ -4,10 +4,17 @@ class Scraper::Loader < Scraper
   end
 
   def call
-    load!
+    CovidCase.transaction do
+      purge!
+      load!
+    end
   end
 
   private
+
+  def purge!
+    CovidCase.connection.execute("DELETE FROM #{CovidCase.table_name}")
+  end
 
   def load!
     read_csv(get(@url)).each do |row|
