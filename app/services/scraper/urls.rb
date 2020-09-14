@@ -1,6 +1,7 @@
 class Scraper::Urls
   BASE_URL = 'https://raw.githubusercontent.com/openZH/covid_19/master/fallzahlen_kanton_total_csv_v2/'.freeze
 
+  # rubocop:disable Metrics/MethodLength
   def self.all
     %w[
       COVID19_Fallzahlen_FL_total.csv
@@ -32,6 +33,5 @@ class Scraper::Urls
       COVID19_Fallzahlen_Kanton_ZH_total.csv
     ].map { |filename| "#{BASE_URL}#{filename}" }
   end
+  # rubocop:enable Metrics/MethodLength
 end
-
-

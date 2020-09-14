@@ -6,7 +6,7 @@ module NullGapsFiller
   end
 
   def sql
-    <<~SQL
+    <<~SQL.squish
       WITH corrected_totals AS (
         SELECT date
              , time

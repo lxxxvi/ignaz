@@ -1,6 +1,8 @@
 class Scraper::Loader < Scraper
   def initialize(url)
     @url = url
+
+    super
   end
 
   def call
