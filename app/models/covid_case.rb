@@ -1,7 +1,7 @@
 class CovidCase < ApplicationRecord
   include RegionScopes
 
-  scope :ordered_by_region, -> { order(:abbreviation_canton_and_fl)}
+  scope :ordered_by_region, -> { order(:abbreviation_canton_and_fl) }
   scope :ordered_chronologically, -> { order(:date, :time) }
   scope :for_region, ->(region) {
     return all if region.nil?

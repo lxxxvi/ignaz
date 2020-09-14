@@ -22,7 +22,7 @@ class CreateNewCovidCases < ActiveRecord::Migration[6.0]
       t.string :source, null: true
       t.timestamps
 
-      t.index [:abbreviation_canton_and_fl, :date, :time], name: "indx_canton_date_time", unique: true
+      t.index %i[abbreviation_canton_and_fl date time], name: 'indx_canton_date_time', unique: true
     end
   end
 end

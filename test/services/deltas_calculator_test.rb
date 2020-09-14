@@ -21,7 +21,7 @@ class DeltasCalculatorTest < ActiveSupport::TestCase
 
     assert_equal 1, covid_case.tested_total_delta
     assert_equal 20, covid_case.confirmed_total_delta
-    assert_equal -2, covid_case.hospitalized_current_delta
+    assert_equal(-2, covid_case.hospitalized_current_delta)
     assert_equal 1, covid_case.icu_current_delta
     assert_nil covid_case.ventilation_current_delta
     assert_equal 10, covid_case.released_total_delta

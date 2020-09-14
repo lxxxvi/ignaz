@@ -6,7 +6,7 @@ module DeltasCalculator
   end
 
   def delta_columns_upsert_sql
-    <<~SQL
+    <<~SQL.squish
       WITH covid_cases_deltas AS (
         SELECT t.abbreviation_canton_and_fl
              , t.date

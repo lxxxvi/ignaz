@@ -14,7 +14,7 @@ class AddCovidCases < ActiveRecord::Migration[6.0]
       t.integer :ninstant_ICU_intub, null: true
       t.string :source, null: true
 
-      t.index [:abbreviation_canton_and_fl, :date, :time], unique: true, name: :indx_canton_date_time
+      t.index %i[abbreviation_canton_and_fl date time], unique: true, name: :indx_canton_date_time
 
       t.timestamps
     end

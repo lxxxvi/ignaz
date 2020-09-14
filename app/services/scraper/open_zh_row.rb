@@ -13,6 +13,7 @@ class Scraper::OpenZhRow
     to_covid_case_attributes.slice(:date, :time, :abbreviation_canton_and_fl)
   end
 
+  # rubocop:disable Metrics/MethodLength
   def to_covid_case_attributes
     {
       date: date,
@@ -36,6 +37,7 @@ class Scraper::OpenZhRow
       source: source
     }
   end
+  # rubocop:enable Metrics/MethodLength
 
   def date
     @csv_row['date']

@@ -1,3 +1,5 @@
+![Continuous Integration](https://github.com/lxxxvi/ignaz/workflows/Continuous%20Integration/badge.svg)
+
 # Ignaz
 
 An API for COVID-19 data in Switzerland
@@ -31,8 +33,6 @@ bin/rails ignaz:scrape
 That task runs every 10 minutes on Heroku.
 
 ## GraphQL API
-
-TBD
 
 Endpoint: `/graphql`
 

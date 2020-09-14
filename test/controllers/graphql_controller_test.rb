@@ -10,7 +10,7 @@ class GraphqlControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'result with variable' do
-    variables = { "region" => "ZG" }
+    variables = { 'region' => 'ZG' }
     result = IgnazSchema.execute(query_for_region, variables: variables)
 
     covid_cases = result['data']['covidCases']
