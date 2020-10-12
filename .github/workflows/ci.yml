@@ -56,7 +56,7 @@ jobs:
 
   test:
     name: Rails tests
-    needs: [bundle_install, yarn_install]
+    needs: bundle_install
     runs-on: ubuntu-latest
     services:
       postgres:
